@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="50" id="KGk-i7-Jjw" customClass="InputImageCell" customModule="MultipleCells" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="50.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ls-Vl-OZJ">
+                        <rect key="frame" x="8" y="8" width="304" height="35"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PrW-nw-3M6">
+                                <rect key="frame" x="38" y="0.0" width="258" height="35"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textDidChangeWithTextField:" destination="KGk-i7-Jjw" eventType="editingChanged" id="qgj-VU-RgB"/>
+                                    <outlet property="delegate" destination="KGk-i7-Jjw" id="mT2-vy-xk8"/>
+                                </connections>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="form-username" translatesAutoresizingMaskIntoConstraints="NO" id="TRQ-fL-aC9">
+                                <rect key="frame" x="8" y="7" width="22" height="22"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PrW-nw-3M6" firstAttribute="leading" secondItem="TRQ-fL-aC9" secondAttribute="trailing" constant="8" id="6jh-pp-FYD"/>
+                            <constraint firstItem="TRQ-fL-aC9" firstAttribute="centerY" secondItem="8Ls-Vl-OZJ" secondAttribute="centerY" id="Aub-9I-mU3"/>
+                            <constraint firstItem="TRQ-fL-aC9" firstAttribute="width" secondItem="8Ls-Vl-OZJ" secondAttribute="width" multiplier="0.07" id="LPq-8S-xSB"/>
+                            <constraint firstAttribute="trailing" secondItem="PrW-nw-3M6" secondAttribute="trailing" constant="8" id="ZUB-8Y-DHr"/>
+                            <constraint firstItem="PrW-nw-3M6" firstAttribute="top" secondItem="8Ls-Vl-OZJ" secondAttribute="top" id="eVD-2G-ckk"/>
+                            <constraint firstItem="TRQ-fL-aC9" firstAttribute="leading" secondItem="8Ls-Vl-OZJ" secondAttribute="leading" constant="8" id="jUG-ap-ucQ"/>
+                            <constraint firstAttribute="bottom" secondItem="PrW-nw-3M6" secondAttribute="bottom" id="mwT-eJ-M3w"/>
+                            <constraint firstItem="TRQ-fL-aC9" firstAttribute="height" secondItem="8Ls-Vl-OZJ" secondAttribute="height" multiplier="0.65" id="rTr-Xh-Fom"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.1137254902" green="0.69019607839999997" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="8Ls-Vl-OZJ" secondAttribute="trailing" constant="8" id="Nm0-uz-hli"/>
+                    <constraint firstAttribute="bottom" secondItem="8Ls-Vl-OZJ" secondAttribute="bottom" constant="7.5" id="VTj-ur-Z5X"/>
+                    <constraint firstItem="8Ls-Vl-OZJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="YnW-Xn-2mY"/>
+                    <constraint firstItem="8Ls-Vl-OZJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="cOn-bi-ZTr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="imgView" destination="TRQ-fL-aC9" id="v5A-I2-Mfv"/>
+                <outlet property="inputTxt" destination="PrW-nw-3M6" id="fxu-kw-fHF"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="56.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="form-username" width="43" height="41"/>
+    </resources>
+</document>
