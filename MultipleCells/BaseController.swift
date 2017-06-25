@@ -40,10 +40,8 @@ extension BaseController: UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: cellClass.cellReuseIdentifier(), for: indexPath) as! BaseCell
         cell.set(title: c.getTitle(), placeholder: c.placeholder(), image: c.image(), secureEntry: c.keyboardSecure(), keyboardType: c.keyboardType())
         cell.type = c.cellType()
+        if cell.type == .dropdown{ cell.pickerOptions = c.pickerOptions() }
         currentCell(c: cell, index: indexPath.row)
-        if cell.type == .dropdown{
-            cell.pickerOptions = c.pickerOptions()
-        }
 
         return cell
     }
